@@ -7,6 +7,7 @@ RUN mkdir -p /tmp/downloads
 # install go
 RUN curl -sf -o /tmp/downloads/go1.2.linux-amd64.tar.gz -L https://go.googlecode.com/files/go1.2.linux-amd64.tar.gz
 RUN mkdir -p /opt && cd /opt && tar xfz /tmp/downloads/go1.2.linux-amd64.tar.gz
+RUN curl -sf -o /usr/bin/forego -L https://godist.herokuapp.com/projects/ddollar/forego/releases/current/linux-amd64/forego && chmod 777 /usr/bin/forego
 
 # env stuff
 ENV GOROOT /opt/go
